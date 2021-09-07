@@ -4,7 +4,7 @@ pipeline {
       
         stage ('Build') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn spring-boot:build-image -Dspring-boot.build-image.imageName=springio/gs-spring-boot-docker'
                 }
             }
         }

@@ -9,7 +9,7 @@ pipeline {
             }
         stage ('tag & push') {
             steps {
-                
+                sh 'docker login --username=aymenlouhaichi --password=Cheese@77232275'  
                 sh 'docker tag paketobuildpacks/run:base-cnb aymenlouhaichi/hpa'
                 sh 'docker push aymenlouhaichi/hpa'
             }     
